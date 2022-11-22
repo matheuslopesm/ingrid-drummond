@@ -45,7 +45,7 @@ body {
 .wrapper {
   width: min(50rem, 100%);
   margin-inline: auto;
-  padding-inline: 2.4rem;
+  padding-inline: 2.5rem;
 }
 
 ul {
@@ -298,25 +298,25 @@ body.menu-expanded button path {
   background-color: rgb(28, 28, 48);
 }
 
-/*================= PROCEDURE =================*/
+/*================= treatment =================*/
 
-#procedure {
+#treatment {
   margin-top: 25rem;
   background-color: hsl(0, 7%, 97%);
 }
 
-#procedure .boxes {
+#treatment .boxes {
   display: flex;
   flex-direction: column;
   gap: 5rem;
 }
 
-#procedure .boxCard img {
+#treatment .boxCard img {
   width: 15rem;
   margin-bottom: 1.5rem;
 }
 
-#procedure .boxCard h2 {
+#treatment .boxCard h2 {
   text-transform: uppercase;
   color: rgba(3, 3, 20, 0.884);
   font-size: 1.8rem;
@@ -324,7 +324,7 @@ body.menu-expanded button path {
   margin-bottom: 2rem;
 }
 
-#procedure .boxCard p {
+#treatment .boxCard p {
   font-size: 1.7rem;
   color: rgba(3, 3, 20, 0.623);
   width: 90%;
@@ -350,24 +350,118 @@ body.menu-expanded button path {
 }
 
 #about header h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--primary-pink);
+  
+  margin-bottom: 3rem;
 }
 
 #about header p {
   font-size: 1.7rem;
   color: rgba(3, 3, 20, 0.623);
 
-  margin-top: 3rem;
+  margin-top: 2rem;
   line-height: 3rem;
+}
+
+#about .check-icon{
+  width: 2rem;
 }
 
 #about .content img{
   margin-top: 4rem;
+  margin-inline: auto;
 }
 
+/*================= CONTACT =================*/
+
+#contact header h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary-pink);
+
+  margin-bottom: 4rem;
+}
+
+#contact .content p {
+  font-size: 1.7rem;
+  color: rgba(3, 3, 20, 0.623);
+  text-align: left;
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#contact .content img{
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+
+/*================= SCHEDULE =================*/
+
+#schedule{
+  padding-top: 5rem;
+}
+
+#schedule header h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#schedule header h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-pink);
+  
+  margin-bottom: 4rem;
+}
+
+#schedule .content p {
+  font-size: 1.7rem;
+  color: rgba(3, 3, 20, 0.623);
+  text-align: left;
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#schedule .content input{
+  margin-block: 0.5rem;
+  padding-block: 1.3rem;
+  padding-left: 2.5rem;
+  width: 100%;
+
+  border: 2.5px solid hsl(60, 1%, 62%);
+  background: var(--bg-grey);
+}
+
+#schedule .content input::placeholder{
+  color: hsl(60, 1%, 62%);
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+#schedule .content .form-submit{
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
+  background-color: rgb(3, 3, 20);
+  color: var(--bg-grey2);
+
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#schedule .form-submit:hover {
+  background-color: rgb(28, 28, 48);
+}
 
 
 
