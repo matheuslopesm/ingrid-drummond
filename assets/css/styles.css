@@ -92,7 +92,6 @@ a.scheduleButton {
 nav {
   display: flex;
   height: var(--nav-height);
-  background-color: hsla(0, 0%, 97%, 0.205);
 
   position: fixed;
   top: 0;
@@ -101,12 +100,9 @@ nav {
   z-index: 100;
 }
 
-.scroll{
-  background-color: var(--bg-grey2);
-}
-
-.logo img {
+nav .logo{
   width: 35%;
+  margin-inline: auto;
 }
 
 nav .wrapper {
@@ -161,7 +157,7 @@ body.menu-expanded .logo {
 body.menu-expanded .menu {
   top: 0;
   left: 0;
-  background: rgb(0, 0, 0);
+  background: hsl(31, 81%, 90%);
 
   width: 100vw;
   height: 100vh;
@@ -174,6 +170,7 @@ body.menu-expanded .menu {
 
 .menu ul {
   text-align: left;
+  padding-left: 0rem;
 }
 
 .menu ul:nth-child(1) {
@@ -187,15 +184,13 @@ body.menu-expanded .menu {
 }
 
 .menu ul li a {
-  color: white;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover{
   color: var(--primary-pink);
-}
-
-.menu .button:hover {
-  background-color: var(--hover-orange);
 }
 
 body.menu-expanded .logo,
@@ -205,7 +200,11 @@ body.menu-expanded button {
 }
 
 body.menu-expanded button path {
-  stroke: white;
+  stroke: black;
+}
+
+body.menu-expanded button path:hover {
+  stroke: var(--primary-pink);
 }
 
 /*================= HOME =================*/
@@ -308,6 +307,21 @@ body.menu-expanded button path {
 #treatment {
   margin-top: 25rem;
   background-color: hsl(0, 7%, 97%);
+}
+
+#treatment header h2{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#treatment header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-pink);
+
+  margin-bottom: 4rem;
 }
 
 #treatment .boxes {
@@ -469,9 +483,9 @@ body.menu-expanded button path {
   margin-right: 1.5rem;
 }
 
-/*================= BLOG =================*/
+/*================= PROCEDURE =================*/
 
-#blog header h1 {
+#procedure header h1 {
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -480,32 +494,33 @@ body.menu-expanded button path {
   margin-bottom: 4rem;
 }
 
-#blog header h2 {
+#procedure header h2 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-#blog .content .cards{
+#procedure .content .cards{
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-#blog .content .boxCard{
+#procedure .content .boxCard{
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.192);
   border-radius: 0.4rem;
 }
 
-#blog .content .boxCard h1{
+#procedure .content .boxCard h1{
   font-size: 2rem;
+  font-weight: 600;
   color: var(--primary-pink);
   text-transform: uppercase;
 
   margin-top: 2rem;
 }
 
-#blog .content .boxCard p{
+#procedure .content .boxCard p{
   color: rgba(3, 3, 20, 0.623);
 
   margin-block: 2rem;
@@ -513,7 +528,7 @@ body.menu-expanded button path {
   width: 85%;
 }
 
-#blog .content .boxCard button{
+#procedure .content .boxCard button{
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 2rem;
@@ -531,9 +546,60 @@ body.menu-expanded button path {
   letter-spacing: 0.1rem;
 }
 
-#blog .content .boxCard button:hover {
+#procedure .content .boxCard button:hover {
   background-color: rgb(28, 28, 48);
 }
+
+/*================= BLOG =================*/
+
+footer{
+  padding-block: 6rem;
+  background-color: var(--bg-grey2);
+
+  text-align: left;
+}
+
+footer .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 3rem;
+}
+
+footer .logo{
+  display: inline-block;
+  margin-bottom: 3rem;
+
+  width: 20rem;
+}
+
+/* footer .col-a a,
+footer .col-a img{
+  width: 60%;
+  margin-bottom: 5rem;
+} */
+
+footer .col-a h1{
+  color: rgb(58, 57, 57);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+footer .col-b{
+  display: flex;
+  gap: 2rem;
+}
+
+footer .col-b i{
+  font-size: 3rem;
+  color: rgb(122, 122, 122);
+}  
+
+footer .col-b i:hover{
+  color: var(--primary-pink);
+}
+
 
 /*======================= Responsivo =======================*/
 
