@@ -92,12 +92,17 @@ a.scheduleButton {
 nav {
   display: flex;
   height: var(--nav-height);
+  background-color: hsla(0, 0%, 97%, 0.205);
 
   position: fixed;
   top: 0;
   width: 100vw;
 
   z-index: 100;
+}
+
+.scroll{
+  background-color: var(--bg-grey2);
 }
 
 .logo img {
@@ -375,37 +380,7 @@ body.menu-expanded button path {
   margin-inline: auto;
 }
 
-/*================= CONTACT =================*/
-
-#contact header h2 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: left;
-  font-weight: 700;
-  color: var(--primary-pink);
-
-  margin-bottom: 4rem;
-}
-
-#contact .content p {
-  font-size: 1.7rem;
-  color: rgba(3, 3, 20, 0.623);
-  text-align: left;
-
-  margin-top: 2rem;
-  line-height: 3rem;
-}
-
-#contact .content img{
-  width: 3rem;
-  margin-right: 1.5rem;
-}
-
 /*================= SCHEDULE =================*/
-
-#schedule{
-  padding-top: 5rem;
-}
 
 #schedule header h2 {
   font-size: 2rem;
@@ -463,8 +438,102 @@ body.menu-expanded button path {
   background-color: rgb(28, 28, 48);
 }
 
+/*================= CONTACT =================*/
 
+#contact{
+  background-color: rgb(255, 255, 255);
+}
 
+#contact header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary-pink);
+
+  margin-bottom: 4rem;
+}
+
+#contact .content p {
+  font-size: 1.7rem;
+  color: rgba(3, 3, 20, 0.623);
+  text-align: left;
+  text-decoration: none;
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#contact .content img{
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+
+/*================= BLOG =================*/
+
+#blog header h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-pink);
+
+  margin-bottom: 4rem;
+}
+
+#blog header h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#blog .content .cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#blog .content .boxCard{
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.192);
+  border-radius: 0.4rem;
+}
+
+#blog .content .boxCard h1{
+  font-size: 2rem;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+
+  margin-top: 2rem;
+}
+
+#blog .content .boxCard p{
+  color: rgba(3, 3, 20, 0.623);
+
+  margin-block: 2rem;
+  margin-inline: auto;
+  width: 85%;
+}
+
+#blog .content .boxCard button{
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  padding-inline: 2rem;
+  padding-block: 1.25rem;
+  z-index: 0;
+
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
+  background-color: rgb(3, 3, 20);
+  color: var(--bg-grey2);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+#blog .content .boxCard button:hover {
+  background-color: rgb(28, 28, 48);
+}
 
 /*======================= Responsivo =======================*/
 
