@@ -8,7 +8,7 @@
 :root {
   --primary-pink: hsl(342, 87%, 61%);
   --primary-grey: hsl(26, 16%, 91%);
-  --semi-black: rgb(3, 3, 20);
+  --semi-black: hsl(240, 74%, 5%);
   --text-black: rgba(3, 3, 20, 0.596);
 
   --luminous-white: hsl(0, 0%, 100%);
@@ -20,7 +20,7 @@
   font-size: 62.5%;
   /* 1rem = 10px */
 
-  --nav-height: 10rem;
+  --nav-height: 8.25rem;
 }
 
 html {
@@ -101,6 +101,7 @@ a {
 nav {
   display: flex;
   height: var(--nav-height);
+  background-color: var(--bg-pink);
 
   position: fixed;
   top: 0;
@@ -110,7 +111,7 @@ nav {
 }
 
 nav .logo {
-  width: 35%;
+  width: 30%;
 }
 
 nav .wrapper {
@@ -149,6 +150,7 @@ nav .close-menu {
 }
 
 /*================= MENU-EXPANDED =================*/
+
 body.menu-expanded {
   overflow: hidden;
 }
@@ -254,7 +256,7 @@ body.menu-expanded button path:hover {
 /*================= HOME =================*/
 
 #home {
-  padding-block: 0rem;
+  padding-top: 3rem;
 }
 
 #home .wrapper {
@@ -273,8 +275,8 @@ body.menu-expanded button path:hover {
   position: absolute;
   z-index: 1;
 
-  padding: 11rem 0 0 0;
-  top: 10rem;
+  padding: 25rem 0 0 0;
+  top: var(--nav-height);
 }
 
 #homeBox .wrapper {
