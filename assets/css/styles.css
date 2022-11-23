@@ -172,7 +172,6 @@ body.menu-expanded .close-menu {
 
 .menu {
   transform: translateX(-100%);
-  padding-left: 4rem;
 }
 
 body.menu-expanded .logo {
