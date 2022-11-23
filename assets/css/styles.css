@@ -7,12 +7,14 @@
 
 :root {
   --primary-pink: hsl(342, 87%, 61%);
-  --secondary-pink: hsl(342, 84%, 44%);
   --primary-grey: hsl(26, 16%, 91%);
+  --semi-black: rgb(3, 3, 20);
+  --text-black: rgba(3, 3, 20, 0.596);
 
-  --luminous-white: hsl(0, 0%, 97%);
+  --luminous-white: hsl(0, 0%, 100%);
 
-  --bg-grey: hsl(26, 16%, 91%);
+  --bg-pink: hsl(31, 80%, 90%);
+  --bg-grey: hsl(30, 30%, 96%);
   --bg-grey2: rgb(202, 201, 199);
 
   font-size: 62.5%;
@@ -34,7 +36,6 @@ body {
 body {
   font-family: 'Roboto';
   font-size: 1.6rem;
-
   text-align: center;
 
   overflow: overlay;
@@ -64,28 +65,36 @@ a {
   text-decoration: none;
 }
 
-a.scheduleButton {
-  color: white;
-  background-color: var(--primary-pink);
-  border-radius: 0.5rem;
-
-  margin-block: 2rem;
-
-  padding: 1.6rem 3rem;
-  width: fit-content;
-
-  font-size: 2rem;
-  font-weight: 500;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  transition: background 500ms;
+#homeBox header h2,
+#treatment header h2,
+#procedure header h2,
+#about header h2,
+#schedule header h2,
+#contact header h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--semi-black);
 }
 
-.scheduleButton:hover {
-  background-color: var(--secondary-pink);
+#homeBox header h1,
+#treatment header h1,
+#procedure header h1,
+#about header h1,
+#schedule header h1,
+#contact header h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+
+  margin-bottom: 4rem;
+}
+
+#treatment header h1,
+#procedure header h1,
+#about header h1,
+#schedule header h1,
+#contact header h1{
+  font-size: 3rem;
+  color: var(--primary-pink);
 }
 
 /*================= NAVIGATION =================*/
@@ -100,9 +109,8 @@ nav {
   z-index: 100;
 }
 
-nav .logo{
+nav .logo {
   width: 35%;
-  margin-inline: auto;
 }
 
 nav .wrapper {
@@ -115,6 +123,24 @@ nav button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+nav .social-fields{
+  margin-top: 17rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav .social-fields i {
+  font-size: 3rem;
+  color: var(--text-black);
+}
+
+nav .social-fields i:hover {
+  color: var(--primary-pink);
 }
 
 nav .menu,
@@ -157,7 +183,7 @@ body.menu-expanded .logo {
 body.menu-expanded .menu {
   top: 0;
   left: 0;
-  background: hsl(31, 81%, 90%);
+  background: var(--bg-pink);
 
   width: 100vw;
   height: 100vh;
@@ -169,8 +195,8 @@ body.menu-expanded .menu {
 }
 
 .menu ul {
-  text-align: left;
   padding-left: 0rem;
+  margin-bottom: 5rem;
 }
 
 .menu ul:nth-child(1) {
@@ -178,18 +204,17 @@ body.menu-expanded .menu {
   flex-direction: column;
   gap: 3rem;
   margin-top: 0;
-  font-weight: 500;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
 .menu ul li a {
-  color: black;
+  color: var(--semi-black);
   text-transform: uppercase;
   font-weight: 300;
 }
 
-.menu ul li a:hover{
+.menu ul li a:hover {
   color: var(--primary-pink);
 }
 
@@ -200,11 +225,31 @@ body.menu-expanded button {
 }
 
 body.menu-expanded button path {
-  stroke: black;
+  stroke: var(--semi-black);
 }
 
 body.menu-expanded button path:hover {
   stroke: var(--primary-pink);
+}
+
+.scheduleButton {
+  width: 100%;
+  padding-inline: 3.5rem;
+  padding-block: 2rem;
+
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
+  background-color: var(--semi-black);
+  color: var(--bg-grey2);
+
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.scheduleButton:hover {
+  background-color: rgb(28, 28, 48);
+  color: var(--bg-grey2);
 }
 
 /*================= HOME =================*/
@@ -242,44 +287,37 @@ body.menu-expanded button path:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 
-  padding-inline: 1.5rem;
   height: 40rem;
   width: 100vw;
+  padding-inline: 1.5rem;
 
-  background-color: var(--bg-grey);
   color: rgb(3, 3, 20);
-  box-shadow: 2px -5px 18px rgba(0, 0, 0, 0.192);
+  background-color: var(--bg-pink);
+  box-shadow: 2px -5px 18px rgba(0, 0, 0, 0.479);
   text-align: center;
 }
 
 #homeBox header h3 {
   font-size: 1.7rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
-  color: white;
+  color: var(--luminous-white);
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   margin-inline: auto;
   padding-block: 0.5rem;
 
   background-color: var(--primary-pink);
-  width: 80%;
+  width: 65%;
 }
 
 #homeBox header h2 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  font-weight: 300;
+  font-size: 2.3rem;
 }
 
 #homeBox header h1 {
   font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 900;
-
-  margin-bottom: 4rem;
 }
 
 #homeBox .homeBoxButton {
@@ -302,233 +340,75 @@ body.menu-expanded button path:hover {
   background-color: rgb(28, 28, 48);
 }
 
-/*================= treatment =================*/
+/*================= TREATMENT =================*/
 
 #treatment {
-  margin-top: 25rem;
-  background-color: hsl(0, 7%, 97%);
+  margin-top: 26rem;
+  background-color: var(--luminous-white);
 }
 
-#treatment header h2{
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-#treatment header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--primary-pink);
-
-  margin-bottom: 4rem;
+#treatment header h2 {
+  margin-top: 3rem;
 }
 
 #treatment .boxes {
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+#treatment .boxCard{
+  margin-inline: auto;
 }
 
 #treatment .boxCard img {
-  width: 15rem;
+  width: 12.5rem;
   margin-bottom: 1.5rem;
 }
 
 #treatment .boxCard h2 {
-  text-transform: uppercase;
-  color: rgba(3, 3, 20, 0.884);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 500;
+  color: var(--text-black);
+
   margin-bottom: 2rem;
-}
-
-#treatment .boxCard p {
-  font-size: 1.7rem;
-  color: rgba(3, 3, 20, 0.623);
-  width: 90%;
-
-  margin-inline: auto;
-}
-
-/*================= ABOUT =================*/
-
-#about {
-  background-color: rgb(255, 255, 255);
-  padding-bottom: 0rem;
-}
-
-#about header {
-  text-align: left;
-}
-
-#about header h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-#about header h1 {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--primary-pink);
-  
-  margin-bottom: 3rem;
-}
-
-#about header p {
-  font-size: 1.7rem;
-  color: rgba(3, 3, 20, 0.623);
-
-  margin-top: 2rem;
-  line-height: 3rem;
-}
-
-#about .check-icon{
-  width: 2rem;
-}
-
-#about .content img{
-  margin-top: 4rem;
-  margin-inline: auto;
-}
-
-/*================= SCHEDULE =================*/
-
-#schedule header h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-#schedule header h1 {
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--primary-pink);
-  
-  margin-bottom: 4rem;
-}
-
-#schedule .content p {
-  font-size: 1.7rem;
-  color: rgba(3, 3, 20, 0.623);
-  text-align: left;
-
-  margin-top: 2rem;
-  line-height: 3rem;
-}
-
-#schedule .content input{
-  margin-block: 0.5rem;
-  padding-block: 1.3rem;
-  padding-left: 2.5rem;
-  width: 100%;
-
-  border: 2.5px solid hsl(60, 1%, 62%);
-  background: var(--bg-grey);
-}
-
-#schedule .content input::placeholder{
-  color: hsl(60, 1%, 62%);
-  font-weight: 600;
-  font-size: 1.4rem;
-  font-style: italic;
-  text-transform: uppercase;
-}
-
-#schedule .content .form-submit{
-  border: none;
-  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
-  background-color: rgb(3, 3, 20);
-  color: var(--bg-grey2);
-
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-#schedule .form-submit:hover {
-  background-color: rgb(28, 28, 48);
-}
-
-/*================= CONTACT =================*/
-
-#contact{
-  background-color: rgb(255, 255, 255);
-}
-
-#contact header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: left;
-  font-weight: 700;
-  color: var(--primary-pink);
-
-  margin-bottom: 4rem;
-}
-
-#contact .content p {
-  font-size: 1.7rem;
-  color: rgba(3, 3, 20, 0.623);
-  text-align: left;
-  text-decoration: none;
-
-  margin-top: 2rem;
-  line-height: 3rem;
-}
-
-#contact .content img{
-  width: 3rem;
-  margin-right: 1.5rem;
 }
 
 /*================= PROCEDURE =================*/
 
-#procedure header h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--primary-pink);
-
-  margin-bottom: 4rem;
+#procedure{
+  background-color: var(--bg-grey);
 }
 
-#procedure header h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-#procedure .content .cards{
+#procedure .content .cards {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-#procedure .content .boxCard{
+#procedure .content .boxCard {
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.192);
   border-radius: 0.4rem;
 }
 
-#procedure .content .boxCard h1{
+#procedure .content .boxCard h1 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-pink);
   text-transform: uppercase;
 
   margin-top: 2rem;
 }
 
-#procedure .content .boxCard p{
-  color: rgba(3, 3, 20, 0.623);
+#procedure .content .boxCard p {
+  color: var(--text-black);
 
   margin-block: 2rem;
   margin-inline: auto;
-  width: 85%;
+  width: 80%;
 }
 
-#procedure .content .boxCard button{
+#procedure .content .boxCard button {
   width: fit-content;
   margin-inline: auto;
   margin-bottom: 2rem;
@@ -550,16 +430,120 @@ body.menu-expanded button path:hover {
   background-color: rgb(28, 28, 48);
 }
 
+/*================= ABOUT =================*/
+
+#about {
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 0rem;
+}
+
+#about header {
+  text-align: left;
+}
+
+#about header h1 {
+  font-size: 3.5rem;
+}
+
+#about header p {
+  font-size: 1.7rem;
+  color: var(--text-black);
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#about .check-icon {
+  width: 2rem;
+}
+
+#about .content img {
+  margin-top: 4rem;
+  margin-inline: auto;
+}
+
+/*================= SCHEDULE =================*/
+
+#schedule .content p {
+  font-size: 1.7rem;
+  color: var(--text-black);
+  text-align: left;
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#schedule .content input {
+  margin-block: 0.5rem;
+  padding-block: 1.3rem;
+  padding-left: 2.5rem;
+  width: 100%;
+
+  border: 2.5px solid hsl(60, 1%, 62%);
+  background: var(--bg-grey);
+}
+
+#schedule .content input::placeholder {
+  color: hsl(60, 1%, 62%);
+  font-weight: 600;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+#schedule .content .form-submit {
+  border: none;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
+  background-color: rgb(3, 3, 20);
+  color: var(--bg-grey2);
+
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#schedule .form-submit:hover {
+  background-color: rgb(28, 28, 48);
+}
+
+/*================= CONTACT =================*/
+
+#contact {
+  background-color: rgb(255, 255, 255);
+}
+
+#contact header h1 {
+  text-align: left;
+}
+
+#contact header h2 {
+  text-align: left;
+}
+
+#contact .content p {
+  font-size: 1.7rem;
+  color: var(--text-black);
+  text-align: left;
+  text-decoration: none;
+
+  margin-top: 2rem;
+  line-height: 3rem;
+}
+
+#contact .content img {
+  width: 3rem;
+  margin-right: 1.5rem;
+}
+
 /*================= BLOG =================*/
 
-footer{
+footer {
   padding-block: 6rem;
-  background-color: var(--bg-grey2);
+  background-color: var(--bg-pink);
 
   text-align: left;
 }
 
-footer .wrapper{
+footer .wrapper {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -567,36 +551,30 @@ footer .wrapper{
   gap: 3rem;
 }
 
-footer .logo{
+footer .logo {
   display: inline-block;
   margin-bottom: 3rem;
 
   width: 20rem;
 }
 
-/* footer .col-a a,
-footer .col-a img{
-  width: 60%;
-  margin-bottom: 5rem;
-} */
-
-footer .col-a h1{
-  color: rgb(58, 57, 57);
+footer .col-a h1 {
+  color: var(--text-black);
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-footer .col-b{
+footer .col-b {
   display: flex;
   gap: 2rem;
 }
 
-footer .col-b i{
+footer .col-b i {
   font-size: 3rem;
   color: rgb(122, 122, 122);
-}  
+}
 
-footer .col-b i:hover{
+footer .col-b i:hover {
   color: var(--primary-pink);
 }
 
