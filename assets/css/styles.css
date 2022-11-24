@@ -70,7 +70,9 @@ a {
 #procedure header h2,
 #about header h2,
 #schedule header h2,
-#contact header h2 {
+#contact header h2,
+#newcontent header h2,
+#newcontent .content h2 {
   text-transform: uppercase;
   font-weight: 300;
   color: var(--semi-black);
@@ -81,7 +83,8 @@ a {
 #procedure header h1,
 #about header h1,
 #schedule header h1,
-#contact header h1 {
+#contact header h1,
+#newcontent header h1{
   text-transform: uppercase;
   font-weight: 700;
 
@@ -92,9 +95,24 @@ a {
 #procedure header h1,
 #about header h1,
 #schedule header h1,
-#contact header h1{
+#contact header h1,
+#newcontent header h1{
   font-size: 3rem;
   color: var(--primary-pink);
+}
+
+#newcontent header,
+#newcontent .content h2 {
+  text-align: left;  
+}
+
+#newcontent header h2{
+  margin-top: 4rem;
+}
+
+#newcontent .content p{
+  text-align: left;
+  color: var(--text-black)
 }
 
 /*================= NAVIGATION =================*/
@@ -275,7 +293,7 @@ body.menu-expanded button path:hover {
   position: absolute;
   z-index: 1;
 
-  padding: 25rem 0 0 0;
+  padding: 21rem 0 0 0;
   top: var(--nav-height);
 }
 
@@ -289,7 +307,7 @@ body.menu-expanded button path:hover {
   flex-direction: column;
   justify-content: center;
 
-  height: 40rem;
+  height: 36rem;
   width: 100vw;
   padding-inline: 1.5rem;
 
@@ -344,7 +362,7 @@ body.menu-expanded button path:hover {
 /*================= TREATMENT =================*/
 
 #treatment {
-  margin-top: 26rem;
+  margin-top: 16rem;
   background-color: var(--luminous-white);
 }
 
