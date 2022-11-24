@@ -84,7 +84,7 @@ a {
 #about header h1,
 #schedule header h1,
 #contact header h1,
-#newcontent header h1{
+#newcontent header h1 {
   text-transform: uppercase;
   font-weight: 700;
 
@@ -96,21 +96,21 @@ a {
 #about header h1,
 #schedule header h1,
 #contact header h1,
-#newcontent header h1{
+#newcontent header h1 {
   font-size: 3rem;
   color: var(--primary-pink);
 }
 
 #newcontent header,
 #newcontent .content h2 {
-  text-align: left;  
+  text-align: left;
 }
 
-#newcontent header h2{
+#newcontent header h2 {
   margin-top: 4rem;
 }
 
-#newcontent .content p{
+#newcontent .content p {
   text-align: left;
   color: var(--text-black)
 }
@@ -144,7 +144,7 @@ nav button {
   cursor: pointer;
 }
 
-nav .social-fields{
+nav .social-fields {
   margin-top: 17rem;
   margin-inline: auto;
 
@@ -376,7 +376,7 @@ body.menu-expanded button path:hover {
   gap: 4rem;
 }
 
-#treatment .boxCard{
+#treatment .boxCard {
   margin-inline: auto;
 }
 
@@ -395,7 +395,7 @@ body.menu-expanded button path:hover {
 
 /*================= PROCEDURE =================*/
 
-#procedure{
+#procedure {
   background-color: var(--bg-grey);
 }
 
@@ -597,285 +597,64 @@ footer .col-b i:hover {
   color: var(--primary-pink);
 }
 
+/*======================= RESPONSIVE =======================*/
 
-/*======================= Responsivo =======================*/
+/* Small screens */
 
-/* @media (min-width: 767px) {
+@media(max-width: 375px) {
+  #homeBox {
+    padding: 15rem 0 0 0;
+  }
+}
+
+@media(min-width: 480px) {
   .wrapper {
-    width: min(75rem, 100%);
+    width: min(100rem, 100%);
   }
 
-  #home{
-    padding-top: var(--nav-height);
-    background-color: var(--bg-black);
-    padding-block: 11rem;
+  nav .logo {
+    width: 20%;
+  }
+}
+
+@media(min-width: 768px) {
+  .wrapper {
+    width: min(125rem, 100%);
   }
 
-  #home .wrapper .col-a {
-    margin-top: 6rem;
+  nav .logo {
+    width: 15%;
   }
 
-  #sold {
-    padding-block: 0rem;
-    background-color: var(--bg-grey);
+  #home .carousel,
+  #home .carousel .carousel-inner {
+    height: 30rem;
   }
 
-  #sold .banner-mobile{
-    display: none;
-  }
-  
-  #sold .wrapper a .banner-desktop{
-    display: block;
-    width: 100%;
-  }
-} */
-
-/* @media(min-width: 992px) {
-  ===== Geral =====
-  body{
-    overflow: auto;
+  #homeBox {
+    padding: 25rem 0 0 0;
   }
 
-  .wrapper{
-    width: min(105rem, 100%);
-    display: grid;
+  #treatment .boxes {
+    gap: 8rem;
   }
 
-  .col-a{
-    grid-area: A;
-  }
-
-  .col-b{
-    grid-area: B;
-  }
-
-  section{
-    padding-block: 12rem;
-  }
-
-  ===== Navigation ===== */
-/* reset
-  nav.navigation .wrapper *{
-    margin: 0;
-    padding: 0;
-    visibility: initial;
-    display: initial;
-    opacity: initial;
-    flex-direction: initial;
-    position: initial;
-    font-size: initial;
-    font-weight: initial;
-    transform: initial;
-    color: initial;
-    background-color: initial;
-    filter: initial;
-  }
-
-  nav.navigation .close-menu,
-  nav.navigation .open-menu{
-    display: none;
-  }
-
-  nav.navigation .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 65%;
-  }
-
-  nav.navigation .menu ul:nth-child(1){
-    display: flex;
-    gap: 3.2rem;
-
-    text-transform: uppercase;
-  }
-
-  nav.navigation .menu ul li a {
-    color: var(--luminous-white);
-    transition-duration: 0.2s;
-  }
-
-  nav.navigation .menu ul li a:hover{
-    color: var(--primary-orange);
-  }
-
-  nav.navigation .menu a.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2.4rem;
-
-    border: none;
-    border-radius: 4rem;
-
-    background-color: var(--primary-orange);
-    color: var(--luminous-white);
-  
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    text-transform: uppercase;
-  }
-  
-  nav.navigation .menu a.button:hover{
-    background-color: var(--hover-orange);
-    border: none;
-  }
-  
-  /*===== Home ===== */
-/* #home{
-    padding-top: var(--nav-height);
-    background-color: var(--bg-black);
-    padding-block: 11rem;
-  }
-
-  #home::before{
-    height: calc(91% - var(--nav-height));
-  }
-
-
-  #home .wrapper{
-    grid-template-columns: 50rem 1fr;
-    grid-template-areas: 
-      'A B';
-  }
-
-  #home .col-b img {
-    display: block;
-    height: 100%;
-    filter: brightness(1.2); 
-  }
-
-
-  #home .col-a{
-    margin-top: 2rem;
-    text-align: left;
-    align-self: center;
-    width: 95%;
-  }
-
-  #home h1{
-    font-size: 4.8rem;
-    line-height: 110%;
-  }
-
-  #home h3{
-    font-size: 1.5rem;
-  }
-
-  #home p{
-    font-size: 1.7rem;
-  } */
-
-/* ===== Sold ===== */
-/* 
-  #sold {
-    padding-block: 0rem;
-    background-color: var(--bg-grey);
-  }
-
-  #sold .banner-mobile{
-    display: none;
-  }
-  
-  #sold .wrapper a .banner-desktop{
-    display: block;
-    width: 100%;
-  } */
-
-/* ===== Services ===== */
-/* #carte h1{
-    width: 47rem;
-    margin-inline: auto;
-  }
-
-  #carte .wrapper .cards{
+  #procedure .content .cards {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2.5rem;
-  }
-
-  #carte .card{
-    width: 45rem;
-    flex-grow: 1;
-  } */
-
-/* ===== About ===== */
-/* #about h3{
-    font-size: 2.7rem;    
-  }
-
-  #about .col-a{
-    width: 82%;
-  }
-
-  #about .content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6rem;
-  } */
-
-/* ===== Meet ===== */
-/* #meet h3{
-    font-size: 1.8rem;
-  }
-
-  #meet .content{
-    display: flex;
     justify-content: center;
-    gap: 3rem;
-
-    margin-top: 4rem;
+    gap: 2rem;
   }
 
-  #meet .col-a p{
+  #procedure .cards .boxCard {
+    width: 35rem;
+  }
+
+  #about .content img {
+    width: 40rem;
+  }
+
+  #schedule .content input {
     width: 70%;
-    margin-inline: auto;
   }
-
-  #meet .social-links li {
-    height: 30px;
-  }
-
-  .insta {
-    height: 30px;
-    transition-duration: 0.1s;
-  }
-  
-  .face {
-    height: 30px;
-    transition-duration: 0.1s;
-  }
-  
-  .insta:hover {
-    height: 24px;
-  }
-  
-  .face:hover {
-    transition-duration: 0.1s;
-    height: 25px;
-  } */
-
-/* ===== Footer ===== */
-/* footer{
-    padding-block: 2rem;
-  }
-
-  footer .wrapper{
-    display: flex;
-    flex-direction: row;
-    gap: 62rem;
-    align-items: center;
-  }
-
-  footer p{
-    margin-bottom: 0;
-  }
-
-  footer .col-b .social-links li{
-    height: 30px;
-  }
-
-  
-} */
+}
