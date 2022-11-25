@@ -617,6 +617,8 @@ footer .col-b i:hover {
   }
 }
 
+/* Large screens */
+
 @media(min-width: 768px) {
   .wrapper {
     width: min(125rem, 100%);
@@ -657,4 +659,139 @@ footer .col-b i:hover {
   #schedule .content input {
     width: 70%;
   }
+}
+
+@media(min-width: 1024px) {
+
+  /*===== GENERAL ===== */
+  body {
+    overflow: auto;
+  }
+
+  .wrapper {
+    width: min(125rem, 100%);
+  }
+
+  /*===== NAVIGATION =====*/
+
+  nav {
+    height: 10rem;
+  }
+
+  nav .logo {
+    width: 20%;
+  }
+
+  nav.navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+  nav.navigation .wrapper {
+    display: flex;
+    gap: 15rem;
+  }
+
+  nav.navigation .close-menu,
+  nav.navigation .open-menu,
+  nav.navigation .social-fields {
+    display: none;
+  }
+
+  nav.navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav.navigation .menu .scheduleButton {
+    width: fit-content;
+    padding-inline: 2.5rem;
+    padding-block: 1.5rem;
+
+    border: none;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.541);
+    background-color: var(--semi-black);
+    color: var(--bg-grey2);
+
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+
+  nav.navigation .menu .scheduleButton:hover {
+    background-color: rgb(28, 28, 48);
+    color: var(--bg-grey2);
+  }
+
+  nav.navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3rem;
+    text-transform: uppercase;
+  }
+
+  nav.navigation .menu ul li a {
+    font-size: 1.62rem;
+  }
+
+  /* ===== HOME ===== */
+  #home {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #home .carousel,
+  #home .carousel .carousel-inner {
+    height: 100vh;
+  }
+
+  /* ===== HOMEBOX ===== */
+  #homeBox {
+    padding: 10rem 0 0 0;
+  }
+
+  #homeBox header {
+    height: 40rem;
+
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  #homeBox header h3 {
+    font-size: 2rem;
+    width: 26%;
+    text-align: center;
+  }
+
+  #homeBox header h2 {
+    font-size: 3.5rem;
+    margin: 3rem 0 0.2rem 0;
+    color: var(--luminous-white);
+  }
+
+  #homeBox header h1 {
+    font-size: 5.5rem;
+    color: var(--luminous-white);
+  }
+
+  /* ===== TREATMENT ===== */
+  #treatment {
+    margin-top: 0rem;
+  }
+
+
+
+
 }
