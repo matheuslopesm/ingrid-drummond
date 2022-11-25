@@ -27,7 +27,6 @@ ScrollReveal({
   #schedule header h1,
   #contact header h2,
   #contact header h1,
-  button,
   #treatment .content img,
   #procedure .content img,
   #about .content img,
