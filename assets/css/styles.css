@@ -68,6 +68,7 @@ a {
 #homeBox header h2,
 #treatment header h2,
 #procedure header h2,
+#aurora header h2,
 #about header h2,
 #schedule header h2,
 #contact header h2,
@@ -81,6 +82,7 @@ a {
 #homeBox header h1,
 #treatment header h1,
 #procedure header h1,
+#aurora header h1,
 #about header h1,
 #schedule header h1,
 #contact header h1,
@@ -93,6 +95,7 @@ a {
 
 #treatment header h1,
 #procedure header h1,
+#aurora header h1,
 #about header h1,
 #schedule header h1,
 #contact header h1,
@@ -110,7 +113,7 @@ a {
   margin-top: 4rem;
 }
 
-#newcontent .content p {
+#newcontent .content {
   text-align: left;
   color: var(--text-black)
 }
@@ -339,7 +342,8 @@ body.menu-expanded button path:hover {
   font-size: 3.5rem;
 }
 
-#homeBox .homeBoxButton {
+#homeBox .homeBoxButton,
+#aurora .content .auroraButton {
   width: fit-content;
   margin-inline: auto;
   padding-inline: 3.5rem;
@@ -355,7 +359,8 @@ body.menu-expanded button path:hover {
   letter-spacing: 0.1rem;
 }
 
-#homeBox .homeBoxButton:hover {
+#homeBox .homeBoxButton:hover,
+#aurora .content .auroraButton:hover {
   background-color: rgb(28, 28, 48);
 }
 
@@ -449,6 +454,27 @@ body.menu-expanded button path:hover {
   background-color: rgb(28, 28, 48);
 }
 
+/*================= AURORA =================*/
+
+#aurora .content p {
+  color: var(--text-black);
+  text-align: left;
+  font-size: 1.7rem;
+
+  margin-bottom: 4rem;
+}
+
+#aurora .content .auroraButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#aurora .content .auroraButton i {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
 /*================= ABOUT =================*/
 
 #about {
@@ -482,15 +508,6 @@ body.menu-expanded button path:hover {
 }
 
 /*================= SCHEDULE =================*/
-
-#schedule .content p {
-  font-size: 1.7rem;
-  color: var(--text-black);
-  text-align: left;
-
-  margin-top: 2rem;
-  line-height: 3rem;
-}
 
 #schedule .content input {
   margin-block: 0.5rem;
@@ -530,10 +547,7 @@ body.menu-expanded button path:hover {
   background-color: rgb(255, 255, 255);
 }
 
-#contact header h1 {
-  text-align: left;
-}
-
+#contact header h1,
 #contact header h2 {
   text-align: left;
 }
@@ -672,6 +686,43 @@ footer .col-b i:hover {
     width: min(125rem, 100%);
   }
 
+  #homeBox header h2,
+  #treatment header h2,
+  #procedure header h2,
+  #aurora header h2,
+  #about header h2,
+  #schedule header h2,
+  #contact header h2,
+  #newcontent header h2,
+  #newcontent .content h2 {
+    font-weight: 400;
+  }
+
+  #homeBox header h1,
+  #treatment header h1,
+  #procedure header h1,
+  #aurora header h1,
+  #about header h1,
+  #schedule header h1,
+  #contact header h1,
+  #newcontent header h1 {
+    margin-bottom: 6rem;
+  }
+
+  #treatment header h1,
+  #procedure header h1,
+  #aurora header h1,
+  #about header h1,
+  #schedule header h1,
+  #contact header h1,
+  #newcontent header h1 {
+    font-size: 4rem;
+  }
+
+  #newcontent .content p {
+    font-size: 1.8rem;
+  }
+
   /*===== NAVIGATION =====*/
 
   nav {
@@ -791,7 +842,146 @@ footer .col-b i:hover {
     margin-top: 0rem;
   }
 
+  #treatment .boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
 
+  #treatment .boxCard img {
+    width: 13rem;
+  }
 
+  #treatment .boxCard h2 {
+    font-size: 1.75rem;
+  }
 
+  /* ===== PROCEDURE ===== */
+
+  #procedure .content .cards {
+    gap: 2rem;
+  }
+
+  #procedure .cards .boxCard {
+    width: 38rem;
+  }
+
+  #procedure .content .boxCard h1 {
+    font-size: 2.2rem;
+  }
+
+  #procedure .content .boxCard p {
+    font-size: 1.7rem;
+  }
+
+  #procedure .content .boxCard button {
+    padding-inline: 3rem;
+    padding-block: 1.5rem;
+  }
+
+  /* ===== AURORA ===== */
+
+  #aurora .content p {
+    font-size: 1.8rem;
+    width: 80%;
+
+    margin-bottom: 5rem;
+    margin-inline: auto;
+  }
+
+  /* ===== ABOUT ===== */
+
+  #about {
+    padding-bottom: 0rem;
+  }
+
+  #about .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #about header {
+    text-align: left;
+  }
+
+  #about header h1 {
+    font-size: 4rem;
+  }
+
+  #about header p {
+    font-size: 1.8rem;
+  }
+
+  #about .check-icon {
+    width: 2.5rem;
+    margin-right: 1.25rem;
+  }
+
+  #about .content img {
+    margin-top: 1rem;
+    width: 45rem;
+  }
+
+  /* ===== SCHEDULE ===== */
+
+  #schedule .content input {
+    width: 50%;
+  }
+
+  #schedule .content input::placeholder {
+    font-size: 1.6rem;
+  }
+
+  /* ===== CONTACT ===== */
+
+  #contact header h1,
+  #contact header h2 {
+    text-align: center;
+  }
+
+  #contact .content p {
+    font-size: 2rem;
+    width: 60%;
+    margin-inline: auto;
+  }
+
+  #contact .content img {
+    width: 3.5rem;
+    margin-right: 2.2rem;
+  }
+
+  /* ===== FOOTER ===== */
+
+  footer {
+    text-align: left;
+  }
+
+  footer .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    width: 25rem;
+  }
+
+  footer .col-a h1 {
+    font-size: 1.8rem;
+  }
+
+  footer .col-b {
+    display: flex;
+    gap: 4rem;
+  }
+
+  footer .col-b i {
+    font-size: 4rem;
+  }
+
+  footer .col-b i:hover {
+    color: var(--primary-pink);
+  }
 }
