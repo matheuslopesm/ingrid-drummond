@@ -82,7 +82,6 @@ a {
 #homeBox header h1,
 #treatment header h1,
 #procedure header h1,
-#aurora header h1,
 #about header h1,
 #schedule header h1,
 #contact header h1,
@@ -95,7 +94,6 @@ a {
 
 #treatment header h1,
 #procedure header h1,
-#aurora header h1,
 #about header h1,
 #schedule header h1,
 #contact header h1,
@@ -122,7 +120,7 @@ a {
 nav {
   display: flex;
   height: var(--nav-height);
-  background-color: var(--bg-pink);
+  background-color: transparent;
 
   position: fixed;
   top: 0;
@@ -277,7 +275,7 @@ body.menu-expanded button path:hover {
 /*================= HOME =================*/
 
 #home {
-  padding-top: 3rem;
+  padding-top: 0;
 }
 
 #home .wrapper {
@@ -456,11 +454,18 @@ body.menu-expanded button path:hover {
 
 /*================= AURORA =================*/
 
+#aurora img {
+  width: 35rem;
+
+  margin-block: 3rem;
+}
+
 #aurora .content p {
   color: var(--text-black);
   text-align: left;
   font-size: 1.7rem;
 
+  margin-top: 2.5rem;
   margin-bottom: 4rem;
 }
 
@@ -511,22 +516,37 @@ body.menu-expanded button path:hover {
 
 /*================= SCHEDULE =================*/
 
-#schedule .content input {
-  margin-block: 0.5rem;
-  padding-block: 1.3rem;
-  padding-left: 2.5rem;
-  width: 100%;
-
-  border: 2.5px solid hsl(60, 1%, 62%);
-  background: var(--bg-grey);
+#schedule .content {
+  background-color: var(--luminous-white);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.192);
+  border-radius: 1.75rem;
+  padding-block: 5rem;
+  padding-inline: 2rem;
 }
 
-#schedule .content input::placeholder {
-  color: hsl(60, 1%, 62%);
-  font-weight: 600;
+#schedule .content input,
+#schedule .content select {
+  margin-block: 0.75rem;
+  padding-block: 1.3rem;
+  padding-left: 2rem;
+  width: 85%;
+
+  border: 2px solid hsl(0, 0%, 11%);
+  border-radius: 1rem;
+  background: var(--luminous-white);
+}
+
+#schedule .content input::placeholder,
+#schedule .content select,
+#schedule .content option {
+  color: hsl(0, 0%, 11%);
+  font-weight: 500;
   font-size: 1.4rem;
-  font-style: italic;
   text-transform: uppercase;
+}
+
+#schedule .content .form-submit {
+  border-radius: 0rem;
 }
 
 #schedule .content .form-submit {
@@ -593,24 +613,50 @@ footer .logo {
   width: 20rem;
 }
 
-footer .col-a h1 {
-  color: var(--text-black);
-  font-size: 1.5rem;
+footer .col-b h1 {
+  color: hsla(342, 86%, 52%, 0.685);
+  font-size: 2rem;
   font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-footer .col-b {
+footer .col-b h1 i {
+  font-size: 2rem;
+  color: hsla(342, 86%, 52%, 0.685);
+}
+
+footer .col-c {
+  margin-top: 3rem;
+}
+
+footer .col-c h1 {
+  color: var(--text-black);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+footer .col-c p {
+  color: var(--text-black);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+footer hr {
+  margin-bottom: 3rem;
+}
+
+footer .icons {
   display: flex;
   gap: 2rem;
 }
 
-footer .col-b i {
-  font-size: 3rem;
-  color: rgb(122, 122, 122);
-}
-
-footer .col-b i:hover {
-  color: var(--primary-pink);
+footer .col-d a i {
+  font-size: 3.5rem;
+  color: hsla(342, 86%, 52%, 0.685);
 }
 
 /*======================= RESPONSIVE =======================*/
@@ -619,7 +665,7 @@ footer .col-b i:hover {
 
 @media(max-width: 375px) {
   #homeBox {
-    padding: 15rem 0 0 0;
+    padding: 12rem 0 0 0;
   }
 }
 
@@ -629,7 +675,11 @@ footer .col-b i:hover {
   }
 
   nav .logo {
-    width: 20%;
+    width: 25%;
+  }
+
+  #homeBox {
+    padding: 20rem 0 0 0;
   }
 }
 
@@ -641,16 +691,16 @@ footer .col-b i:hover {
   }
 
   nav .logo {
-    width: 15%;
+    width: 18%;
   }
 
   #home .carousel,
   #home .carousel .carousel-inner {
-    height: 30rem;
+    height: 35rem;
   }
 
   #homeBox {
-    padding: 25rem 0 0 0;
+    padding: 22rem 0 0 0;
   }
 
   #treatment .boxes {
@@ -672,7 +722,8 @@ footer .col-b i:hover {
     width: 40rem;
   }
 
-  #schedule .content input {
+  #schedule .content input,
+  #schedule .content select {
     width: 70%;
   }
 }
@@ -703,7 +754,6 @@ footer .col-b i:hover {
   #homeBox header h1,
   #treatment header h1,
   #procedure header h1,
-  #aurora header h1,
   #about header h1,
   #schedule header h1,
   #contact header h1,
@@ -713,7 +763,6 @@ footer .col-b i:hover {
 
   #treatment header h1,
   #procedure header h1,
-  #aurora header h1,
   #about header h1,
   #schedule header h1,
   #contact header h1,
@@ -797,6 +846,7 @@ footer .col-b i:hover {
 
   nav.navigation .menu ul li a {
     font-size: 1.62rem;
+    color: var(--luminous-white);
   }
 
   /* ===== HOME ===== */
@@ -927,8 +977,18 @@ footer .col-b i:hover {
 
   /* ===== SCHEDULE ===== */
 
-  #schedule .content input {
-    width: 50%;
+  #schedule .content {
+    padding-block: 5rem;
+    padding-inline: 1rem;
+    width: 70%;
+    margin-inline: auto;
+  }
+
+  #schedule .content input,
+  #schedule .content select {
+    border-radius: 1rem;
+    width: 75%;
+    margin-inline: auto;
   }
 
   #schedule .content input::placeholder {
@@ -959,10 +1019,10 @@ footer .col-b i:hover {
     text-align: left;
   }
 
-  footer .wrapper {
+  footer .content {
     display: flex;
     flex-direction: row;
-    align-items: top;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -970,20 +1030,28 @@ footer .col-b i:hover {
     width: 25rem;
   }
 
-  footer .col-a h1 {
-    font-size: 1.8rem;
+  footer .col-b h1 {
+    font-size: 2.5rem;
+    gap: 1.5rem;
   }
 
-  footer .col-b {
+  footer .col-b h1 i {
+    font-size: 3rem;
+  }
+
+  footer .col-d {
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  footer .col-b i {
+  footer .icons {
+    margin-inline: auto;
+    gap: 3rem;
+  }
+
+  footer .col-d a i {
     font-size: 4rem;
   }
 
-  footer .col-b i:hover {
-    color: var(--primary-pink);
-  }
 }
