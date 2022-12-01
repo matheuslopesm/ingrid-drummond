@@ -663,9 +663,15 @@ footer .col-d a i {
 
 /* Small screens */
 
-@media(max-width: 375px) {
+@media(min-width: 300px) {
   #homeBox {
     padding: 12rem 0 0 0;
+  }
+}
+
+@media(max-width: 375px) {
+  #homeBox {
+    padding: 7rem 0 0 0;
   }
 }
 
