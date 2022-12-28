@@ -389,6 +389,11 @@ body.menu-expanded button path:hover {
   margin-bottom: 1.5rem;
 }
 
+#treatment .boxCard .big-size{
+  width: 10rem;
+  padding-top: 3rem;
+}
+
 #treatment .boxCard h2 {
   font-size: 1.8rem;
   font-weight: 500;
