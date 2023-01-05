@@ -389,7 +389,7 @@ body.menu-expanded button path:hover {
   margin-bottom: 1.5rem;
 }
 
-#treatment .boxCard .big-size{
+#treatment .boxCard .big-size {
   width: 10rem;
   padding-top: 3rem;
 }
@@ -743,9 +743,7 @@ footer .col-d a i {
 @media(min-width: 1024px) {
 
   /*===== GENERAL ===== */
-  body {
-    overflow: auto;
-  }
+
 
   .wrapper {
     width: min(125rem, 100%);
@@ -790,10 +788,11 @@ footer .col-d a i {
 
   nav {
     height: 10rem;
+    width: 100%;
   }
 
   nav .logo {
-    width: 20%;
+    width: 19%;
   }
 
   nav.navigation .wrapper * {
@@ -814,7 +813,7 @@ footer .col-d a i {
 
   nav.navigation .wrapper {
     display: flex;
-    gap: 15rem;
+    gap: 14rem;
   }
 
   nav.navigation .close-menu,
@@ -864,18 +863,25 @@ footer .col-d a i {
 
   /* ===== HOME ===== */
   #home {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  #home .wrapper,
+  #home #carouselExampleInterval,
+  #home .slide{
+    margin: 0;
   }
 
   #home .carousel,
-  #home .carousel .carousel-inner {
+  #home .carousel .carousel-inner{
     height: 100vh;
   }
 
   /* ===== HOMEBOX ===== */
   #homeBox {
     padding: 10rem 0 0 0;
+    margin: 0;
   }
 
   #homeBox header {
