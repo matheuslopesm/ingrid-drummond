@@ -256,21 +256,11 @@
         <h1>Agende sua consulta</h1>
       </header>
       <div class="content">
-        <form action="">
-          <input type="text" placeholder="Nome completo">
-          <input type="email" placeholder="E-mail">
-          <input type="tel" placeholder="Telefone">
-          <input type="date" placeholder="DD/MM/AAAA">
-          <select name="atendimento">
-            <option value="consulta">Consulta ginecológica</option>
-            <option value="ultrassom">Ultrassom</option>
-            <option value="laser">Laser íntimo</option>
-            <option value="cosmetologia">Cosmetologia</option>
-            <option value="rejuvenescimento">Rejuvenescimento Vaginal</option>
-            <option value="plastica">Plástica Íntima</option>
-            <option value="clitoroplastia">Clitoroplastia</option>
-            <option value="ninfoplastia">Ninfoplastia</option>
-          </select>
+        <form action="#" method="get" onsubmit="abrirWhatsapp()">
+          <input type="text" name="nome" id="form-Name" placeholder="Nome completo" required>
+          <input type="email" name="email" id="form-email" placeholder="E-mail" required>
+          <input type="tel" name="tel" id="form-tel" placeholder="Telefone" required>
+          <input type="text" id="form-date" placeholder="Data desejada: Dia/Mês/Ano">
           <input type="submit" class="form-submit" value="Marcar consulta">
         </form>
       </div>
@@ -314,8 +304,10 @@
       <div class="col-d">
         <hr>
         <div class="icons">
-          <a href="https://api.whatsapp.com/send?phone=5531989773977&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Unicl%C3%ADnica!" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/draingriddrumond/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=5531989773977&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Unicl%C3%ADnica!"
+            target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/draingriddrumond/" target="_blank"><i
+              class="fa-brands fa-instagram"></i></a>
           <a href="https://www.facebook.com/draingriddrumond" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </div>
