@@ -276,7 +276,9 @@ body.menu-expanded button path:hover {
 /*================= HOME =================*/
 
 #home {
-  padding-top: 0;
+  position: relative;
+  padding-top: var(--nav-height);
+  padding-bottom: 0;
 }
 
 #home .wrapper {
@@ -285,17 +287,13 @@ body.menu-expanded button path:hover {
   padding-inline: 0rem;
 }
 
-#home.carousel {
-  height: 70rem;
-}
 
 /*================= HOME BOX =================*/
 
 #homeBox {
-  position: absolute;
   z-index: 1;
-
-  padding: 21rem 0 0 0;
+  position: absolute;
+  padding-top: 0rem;
   top: var(--nav-height);
 }
 
@@ -314,8 +312,7 @@ body.menu-expanded button path:hover {
   padding-inline: 1.5rem;
 
   color: rgb(3, 3, 20);
-  background-color: var(--bg-pink);
-  box-shadow: 2px -5px 18px rgba(0, 0, 0, 0.479);
+  background-color: none;
   text-align: center;
 }
 
@@ -335,10 +332,12 @@ body.menu-expanded button path:hover {
 
 #homeBox header h2 {
   font-size: 2.3rem;
+  color: var(--luminous-white);
 }
 
 #homeBox header h1 {
   font-size: 3.5rem;
+  color: var(--luminous-white);
 }
 
 #homeBox .homeBoxButton,
@@ -366,7 +365,7 @@ body.menu-expanded button path:hover {
 /*================= TREATMENT =================*/
 
 #treatment {
-  margin-top: 16rem;
+  margin-top: 0rem;
   background-color: var(--luminous-white);
 }
 
@@ -669,19 +668,7 @@ footer .col-d a i {
 
 /* Small screens */
 
-@media(min-width: 300px) {
-  #homeBox {
-    padding: 12rem 0 0 0;
-  }
-}
-
-@media(max-width: 375px) {
-  #homeBox {
-    padding: 7rem 0 0 0;
-  }
-}
-
-@media(min-width: 480px) {
+@media(min-width: 350px) {
   .wrapper {
     width: min(100rem, 100%);
   }
@@ -690,8 +677,62 @@ footer .col-d a i {
     width: 25%;
   }
 
-  #homeBox {
-    padding: 20rem 0 0 0;
+  #homeBox header {
+    height: 27rem;
+    padding-inline: 1rem;
+  }
+
+  #homeBox header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #homeBox header h2 {
+    font-size: 2rem;
+  }
+
+  #homeBox header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+  }
+
+  #homeBox .homeBoxButton,
+  #aurora .content .auroraButton {
+    padding-inline: 2.5rem;
+    padding-block: 1.75rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media(min-width: 468px) {
+
+  #home .carousel,
+  #home .carousel .carousel-inner {
+    height: 35rem;
+  }
+
+  #homeBox header {
+    height: 37rem;
+    padding-inline: 1rem;
+  }
+
+  #homeBox header h3 {
+    font-size: 1.5rem;
+  }
+
+  #homeBox header h2 {
+    font-size: 2.5rem;
+  }
+
+  #homeBox header h1 {
+    font-size: 3.3rem;
+  }
+
+  #homeBox .homeBoxButton,
+  #aurora .content .auroraButton {
+    padding-inline: 2.8rem;
+    padding-block: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -708,11 +749,7 @@ footer .col-d a i {
 
   #home .carousel,
   #home .carousel .carousel-inner {
-    height: 35rem;
-  }
-
-  #homeBox {
-    padding: 22rem 0 0 0;
+    height: 40rem;
   }
 
   #treatment .boxes {
@@ -869,12 +906,12 @@ footer .col-d a i {
 
   #home .wrapper,
   #home #carouselExampleInterval,
-  #home .slide{
+  #home .slide {
     margin: 0;
   }
 
   #home .carousel,
-  #home .carousel .carousel-inner{
+  #home .carousel .carousel-inner {
     height: 100vh;
   }
 
